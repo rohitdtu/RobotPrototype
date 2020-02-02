@@ -10,6 +10,6 @@ public class RobotPrototypeApplication {
 	public static void main(String[] args) {
 		ApplicationContext appContext = SpringApplication.run(RobotPrototypeApplication.class, args);
 		Robot robot  = appContext.getBean(Robot.class);
-		robot.walkAnCarryWeight(2, 5);
+		robot.walkAndCarryWeight(2, 5);
 	}
 }

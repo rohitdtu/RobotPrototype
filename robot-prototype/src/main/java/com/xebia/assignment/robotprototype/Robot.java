@@ -23,6 +23,7 @@ public class Robot {
 	
 	public void walk(double distance){
 		boolean canWalk = walking.work(battery.getCurrentBattery(), distance);
+		
 		if(!canWalk){
 			System.out.println("Cant't walk");
 		} else {
@@ -33,6 +34,7 @@ public class Robot {
 	
 	public void carryWeight(double weight){
 		boolean canCarryWeight = handlingObjects.work(battery.getCurrentBattery(), weight);
+		
 		if(!canCarryWeight) {
 			System.out.println("Overweight");
 		} else {
@@ -41,7 +43,7 @@ public class Robot {
 		}
 	}
 	
-	public void walkAnCarryWeight(double distance, double weight){
+	public void walkAndCarryWeight(double distance, double weight){
 		boolean canWalk = walking.work(battery.getCurrentBattery(), distance);
 		boolean canCarryWeight = handlingObjects.work(battery.getCurrentBattery(), weight);
 		
